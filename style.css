@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+  /* overflow: hidden; */
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: absolute;
+  z-index: 1; /* Image stays above the lightning effect */
+}
+
+.centered-image {
+  height: 50vh; /* 40% of the viewport height */
+  width: auto;
+  border-radius: 10px;
+}
+
+.lightning-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease-in-out;
+  z-index: 0; /* Lightning effect stays behind the image and text */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .centered-image {
+      height: 50vh; /* Adjust image size for smaller screens */
+  }
+
+}
