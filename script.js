@@ -1,8 +1,13 @@
 const lightningEffect = document.querySelector('.lightning-effect');
-const thunderAudio = document.getElementById('thunder-audio');
+// const thunderAudio = document.getElementById('thunder-audio');
 
-// Play thunder sound
-thunderAudio.play();
+// // Play thunder sound
+// thunderAudio.play();
+
+document.addEventListener('click', function() {
+  const thunderAudio = document.getElementById('thunder-audio');
+  thunderAudio.play();
+});
 
 // Array of colors for the lightning effect
 const colors = [
@@ -33,7 +38,7 @@ function triggerLightning() {
 }
 
 // Trigger lightning effect at random intervals
-setInterval(triggerLightning, Math.random() * 3000 + 2000); // Between 2 to 5 seconds
+setInterval(triggerLightning, Math.random() * 3000 + 1000); // Between 2 to 5 seconds
 
 
 // Image Positions Changes 
@@ -43,7 +48,7 @@ const imageElement = document.getElementById('dynamic-image');
 // List of image URLs
 const images = [
     'assets/devi.png',
-'assets/devi1.png','assets/devi2.png','assets/devi3.png','assets/devi4.png',
+'assets/devi1.png','assets/devi2.png','assets/devi3.png','assets/devi4.png', 'assets/devi5.png', 'assets/devi6.png','assets/devi7.jpg','assets/devi8.jpg',
 ];
 
 let currentImageIndex = 0;
